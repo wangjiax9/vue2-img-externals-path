@@ -27,6 +27,9 @@ module.exports = {
       '@': resolve('src'),
     }
   },
+  externals: {
+    'createjs': 'createjs'
+  },
   module: {
     rules: [
       {

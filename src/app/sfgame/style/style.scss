@@ -1,9 +1,22 @@
+html,body{
+    width:100%;
+    height:100%;
+}
 body{
     background:#000;
     color:#fff;
+    margin:0;
+    padding:0;
 }
 .biebb{
     width:200px;
     height: 200px;
     background: url('../images/player.png') no-repeat;
+}
+#cvs{
+    position: absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
 }
