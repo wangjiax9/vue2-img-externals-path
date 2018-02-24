@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    
+  <% if (htmlWebpackPlugin.options.env == 'production') { %>
+  <link href="<%= htmlWebpackPlugin.files.chunks['sfgame/sfgame'].css %>" rel="stylesheet">
+  <% }%>
+</head>
+  <body >
+    <div id="app"></div>
+    <div class="biebb"></div>
+    <script src="../static/createjs/easeljs.min.js" type="text/javascript"></script>
+    <script src="/static/preloadjs.min.js" type="text/javascript"></script>
+    <% if (htmlWebpackPlugin.options.env == 'production') { %>
+    <script src="<%= htmlWebpackPlugin.files.chunks.manifest.entry %>" type="text/javascript"></script>
+    <script src="<%= htmlWebpackPlugin.files.chunks.vendor.entry %>" type="text/javascript"></script>
+    <script src="<%= htmlWebpackPlugin.files.chunks['sfgame/sfgame'].entry %>" type="text/javascript"></script>
+    <% }%>
+</body>
+</html>
