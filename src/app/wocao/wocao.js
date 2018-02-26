@@ -3,9 +3,10 @@
 import Vue from 'vue'
 import App from './WocaoApp'
 import router from './router'
+import $ from 'jquery'
 
 Vue.config.productionTip = false
-
+console.log($(window).height())
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

@@ -28,3 +28,13 @@ let manifest = [
 <script src="/static/preloadjs.min.js" type="text/javascript"></script>
 ```
 在dev环境下，会出现外部js无法正常加载，
+
+在chook/config/index.js中修改assetsSubDirectory，去掉斜杠' / '
+```
+dev: {
+
+    // Paths
+    assetsSubDirectory: 'static',
+```
+即可在src下的js或者css中使用相对路径引用图片
+这是在我一一对比了两个架构的配置文件后发现的，太不起眼，却又至关重要

@@ -1,4 +1,5 @@
 import createjs from 'createjs'
+import $ from 'jquery'
 import Snow from './model/snow'
 require('./style/style.scss')
 
@@ -11,6 +12,7 @@ let snowDatas = []
 var cvs = document.getElementById('cvs')
 cvs.width = config.width
 cvs.height = config.height
+console.log($(window).height())
 
 stage = new createjs.Stage(cvs)
 stage.name = 'stage'
